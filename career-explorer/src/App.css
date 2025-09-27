@@ -1,0 +1,293 @@
+/* Global layout */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(135deg, #ffff 0%, #ffff 100%);
+  color: #1e293b;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+/* Header */
+.header {
+  text-align: center;
+  color: #667eea;
+  margin-bottom: 30px;
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+/* Search Section */
+.search-section {
+  background: white;
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.search-box {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  width: 93.5%;
+  padding: 12px 45px 12px 15px;
+  border: 2px solid #e2e8f0;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
+.search-input:focus {
+  border-color: #667eea;
+  outline: none;
+}
+
+.search-icon {
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+  opacity: 0.6;
+}
+
+/* Education Filters */
+.education-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.education-filters button {
+  padding: 8px 15px;
+  border: 2px solid #667eea;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.education-filters button.active,
+.education-filters button:hover {
+  background: #667eea;
+  color: white;
+}
+
+/* Course Grid */
+.course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.course-card {
+  background: #f9fafb;
+  padding: 18px;
+  border-radius: 14px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.course-card:hover {
+  transform: translateY(-3px);
+  border-color: #667eea;
+}
+
+.course-card.selected {
+  border-color: #667eea;
+  background: #eef2ff;
+}
+
+.course-card .course-level {
+  font-size: 13px;
+  color: #667eea;
+  margin-bottom: 6px;
+  font-weight: 500;
+}
+
+.course-card .course-title {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* Filter buttons */
+.filters-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.filters button {
+  padding: 7px 14px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.filters button.active,
+.filters button:hover {
+  background: #667eea;
+  color: white;
+}
+
+/* Compare toggle */
+.compare-toggle {
+  padding: 8px 15px;
+  background: #667eea;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.compare-toggle:hover {
+  background: #667eea;
+}
+
+.compare-info {
+  margin-top: 15px;
+  padding: 15px;
+  background: #eef2ff;
+  border-radius: 12px;
+  border: 2px solid #667eea;
+  font-size: 14px;
+}
+
+/* Career Path Section */
+.career-path {
+  background: white;
+  padding: 20px;
+  border-radius: 16px;
+  margin-top: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.path-header h2 {
+  margin: 0 0 5px 0;
+  color: #1e293b;
+}
+
+.path-header .course-level {
+  font-size: 14px;
+  font-weight: 500;
+  color: #667eea;
+  margin-bottom: 10px;
+}
+
+.path-category {
+  margin-top: 20px;
+}
+
+.category-title {
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.category-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  font-size: 18px;
+  color: white;
+}
+
+.category-icon.govt-exams {
+  background: #2563eb;
+}
+
+.category-icon.private-jobs {
+  background: #10b981;
+}
+
+.category-icon.entrepreneurship {
+  background: #f59e0b;
+}
+
+.category-icon.higher-studies {
+  background: #8b5cf6;
+}
+
+/* Options inside each category */
+.options-list {
+  display: grid;
+  gap: 12px;
+  margin-left: 46px;
+}
+
+.option-item {
+  background: #f9fafb;
+  padding: 12px 15px;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+.option-item:hover {
+  background: #eef2ff;
+}
+
+.option-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+  font-size: 15px;
+}
+
+.option-desc {
+  font-size: 14px;
+  color: #475569;
+}
+
+/* Comparison layout */
+.comparison-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 60px 20px;
+  color: white;
+}
+
+.empty-state .icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
